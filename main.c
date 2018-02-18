@@ -16,7 +16,6 @@ SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
 SDL_SetVideoMode( 1024, 768, 32, SDL_OPENGL |
                                 SDL_GL_DOUBLEBUFFER |
                                 SDL_HWPALETTE |
-                                SDL_FULLSCREEN | 
                                 SDL_RESIZABLE);
 SDL_ShowCursor(SDL_DISABLE);
 /* OpenGL related settings */
