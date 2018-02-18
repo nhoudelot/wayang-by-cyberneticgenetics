@@ -34,25 +34,25 @@ GLuint loadPNGTexture(const char *filename){
   png_end      = png_create_info_struct(texture_ptr);
   png_init_io(texture_ptr, texturefile);
   png_read_info(texture_ptr, texture_info);
-  row          = malloc(sizeof(png_bytep) * texture_info->height);
-  image        = malloc(texture_info->width  *
-                        texture_info->height * 
-                        texture_info->channels);
+  row          = malloc(sizeof(png_bytep) * png_get_image_height(texture_ptr, texture_info));
+  image        = malloc(png_get_image_width(texture_ptr, texture_info) *
+                       png_get_image_height(texture_ptr, texture_info) *
+                       png_get_channels(texture_ptr, texture_info));
 
-  switch(texture_info->channels){
+  switch(png_get_channels(texture_ptr, texture_info)){
      case 4:  png_format = GL_RGBA;            break;
      case 3:  png_format = GL_RGB;             break;
      case 2:  png_format = GL_LUMINANCE_ALPHA; break;
      default: png_format = GL_R;
   };
 
-  if(texture_info->channels == 3){
+  if(png_get_channels(texture_ptr, texture_info) == 3){
      png_format = GL_RGB;
   }
 
   /* We set the png row pointer to the stored texture data */
-  for(i = 0; i < texture_info->height; i++){
-     row[texture_info->height - 1 - i] = image + i * (texture_info->width * texture_info->channels);
+  for(i = 0; i < png_get_image_height(texture_ptr, texture_info); i++){
+     row[png_get_image_height(texture_ptr, texture_info) - 1 - i] = image + i * (png_get_image_width(texture_ptr, texture_info) * png_get_channels(texture_ptr, texture_info));
   }
 
   /* Read the file */
@@ -62,8 +62,8 @@ GLuint loadPNGTexture(const char *filename){
   glGenTextures(1,&texture);
   glBindTexture(GL_TEXTURE_2D, texture);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, texture_info->width,
-               texture_info->height, 0, png_format, GL_UNSIGNED_BYTE,
+  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA,png_get_image_width(texture_ptr, texture_info) ,
+               png_get_image_height(texture_ptr, texture_info) , 0, png_format, GL_UNSIGNED_BYTE,
                image);
   /*glEnable(GL_TEXTURE_2D);*/
 
