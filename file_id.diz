@@ -1,0 +1,27 @@
+Cybernetic genetics
+
+Wayang
+
+SceneCon 2009
+
+Code:   Travis
+Visual: Grass
+Music:  Cardinal
+
+System requirements:
+Linux, libpng, OpenGL 2.1, SDL
+Source code included under GPL v3.0
+licence.
+
+Background:
+
+Wayang is a traditional Indonesian shadow
+theater. The stories are usually came from
+epic poems like Ramayana.
+
+This demo tells the story of Jatajus, the
+vulture. Jatajus try to save Sita from the
+evil king Ravana.
+
+We try to make a demo which visual performace
+close to the original wayang feeling.
