@@ -34,7 +34,7 @@ glEnable(GL_BLEND);
 init_wayang();
 /* Music initialization */
 Mix_OpenAudio(22050, AUDIO_S16, 2, 4096);
-music = Mix_LoadMUS("data/wayang.ogg");
+music = Mix_LoadMUS("/usr/share/wayang-by-cyberneticgenetics/data/wayang.ogg");
 Mix_PlayMusic(music, 0);
 start = SDL_GetTicks();
 

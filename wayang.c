@@ -53,38 +53,38 @@ Movements *jatajus_fight;
 /* initialize meshes, textures, sounds */
 void init_wayang(){
 
-   canvas           = loadPNGTexture("data/canvas.png");
-   endscroll        = loadPNGTexture("data/end.png");
+   canvas           = loadPNGTexture("/usr/share/wayang-by-cyberneticgenetics/data/canvas.png");
+   endscroll        = loadPNGTexture("/usr/share/wayang-by-cyberneticgenetics/data/end.png");
 
-   sita             = loadOBJ("data/sita.obj");
-   sita_arm         = loadOBJ("data/sita_arm.obj");
-   logo             = loadOBJ("data/logo.obj");
-   clouds[0]        = loadOBJ("data/cloud1.obj");
-   clouds[1]        = loadOBJ("data/cloud2.obj");
-   clouds[2]        = loadOBJ("data/cloud3.obj");
-   clouds[3]        = loadOBJ("data/cloud4.obj");
-   tree             = loadOBJ("data/tree.obj");
-   tree2            = loadOBJ("data/tree2.obj");
-   tree3            = loadOBJ("data/tree3.obj");
-   ravana           = loadOBJ("data/ravana.obj");
-   stick            = loadOBJ("data/stick.obj");
-   sword            = loadOBJ("data/sword.obj");
-   couch            = loadOBJ("data/couch.obj");
-   horse            = loadOBJ("data/horse.obj");
-   jatajus          = loadOBJ("data/jatajus.obj");
-   leftwing         = loadOBJ("data/leftwing.obj");
-   rightwing        = loadOBJ("data/rightwing.obj");
-   eyelip           = loadOBJ("data/jatajus_eyelip.obj");
-   arrow            = loadOBJ("data/arrow.obj");
-   hand             = loadOBJ("data/hand.obj");
-   arm              = loadOBJ("data/lowarm.obj");
-   humerus          = loadOBJ("data/humerus.obj");
+   sita             = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/sita.obj");
+   sita_arm         = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/sita_arm.obj");
+   logo             = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/logo.obj");
+   clouds[0]        = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/cloud1.obj");
+   clouds[1]        = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/cloud2.obj");
+   clouds[2]        = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/cloud3.obj");
+   clouds[3]        = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/cloud4.obj");
+   tree             = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/tree.obj");
+   tree2            = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/tree2.obj");
+   tree3            = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/tree3.obj");
+   ravana           = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/ravana.obj");
+   stick            = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/stick.obj");
+   sword            = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/sword.obj");
+   couch            = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/couch.obj");
+   horse            = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/horse.obj");
+   jatajus          = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/jatajus.obj");
+   leftwing         = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/leftwing.obj");
+   rightwing        = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/rightwing.obj");
+   eyelip           = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/jatajus_eyelip.obj");
+   arrow            = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/arrow.obj");
+   hand             = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/hand.obj");
+   arm              = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/lowarm.obj");
+   humerus          = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/humerus.obj");
 
    /* Deadline is comming, no optimization */
    /* This trees are smaller, have lower alpha value */
-   small_tree[0]    = loadOBJ("data/tree.obj");
-   small_tree[1]    = loadOBJ("data/tree2.obj");
-   small_tree[2]    = loadOBJ("data/tree3.obj");
+   small_tree[0]    = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/tree.obj");
+   small_tree[1]    = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/tree2.obj");
+   small_tree[2]    = loadOBJ("/usr/share/wayang-by-cyberneticgenetics/data/tree3.obj");
 
    changeMeshColor(clouds[0], 1.0f, 1.0f, 1.0f, 0.2f);
    changeMeshColor(clouds[1], 1.0f, 1.0f, 1.0f, 0.2f);
@@ -95,15 +95,15 @@ void init_wayang(){
    changeMeshColor(small_tree[1], 1.0f, 1.0f, 1.0f, 0.2f);
    changeMeshColor(small_tree[2], 1.0f, 1.0f, 1.0f, 0.2f);
 
-   sita_move        = loadMovements("data/sita_move.txt");
-   ravana_move      = loadMovements("data/ravana_move.txt");
-   ravana_sita_move = loadMovements("data/ravana_with_sita_move.txt");
-   ravana_couch     = loadMovements("data/ravana_couch_move.txt");
-   flying_couch     = loadMovements("data/couch_move.txt");
-   jatajus_move     = loadMovements("data/jatajus_move.txt");
-   jatajus_attack   = loadMovements("data/jatajus_attack_move.txt");
-   ravana_attack    = loadMovements("data/ravana_attack_move.txt");
-   jatajus_fight    = loadMovements("data/jatajus_fight_move.txt");
+   sita_move        = loadMovements("/usr/share/wayang-by-cyberneticgenetics/data/sita_move.txt");
+   ravana_move      = loadMovements("/usr/share/wayang-by-cyberneticgenetics/data/ravana_move.txt");
+   ravana_sita_move = loadMovements("/usr/share/wayang-by-cyberneticgenetics/data/ravana_with_sita_move.txt");
+   ravana_couch     = loadMovements("/usr/share/wayang-by-cyberneticgenetics/data/ravana_couch_move.txt");
+   flying_couch     = loadMovements("/usr/share/wayang-by-cyberneticgenetics/data/couch_move.txt");
+   jatajus_move     = loadMovements("/usr/share/wayang-by-cyberneticgenetics/data/jatajus_move.txt");
+   jatajus_attack   = loadMovements("/usr/share/wayang-by-cyberneticgenetics/data/jatajus_attack_move.txt");
+   ravana_attack    = loadMovements("/usr/share/wayang-by-cyberneticgenetics/data/ravana_attack_move.txt");
+   jatajus_fight    = loadMovements("/usr/share/wayang-by-cyberneticgenetics/data/jatajus_fight_move.txt");
 }
 
 /* free all resources */
