@@ -17,6 +17,7 @@ SDL_SetVideoMode( 1024, 768, 32, SDL_OPENGL |
                                 SDL_GL_DOUBLEBUFFER |
                                 SDL_HWPALETTE |
                                 SDL_RESIZABLE);
+SDL_WM_SetCaption("Wayang by Cybernetic Genetics",NULL);
 SDL_ShowCursor(SDL_DISABLE);
 /* OpenGL related settings */
 glClearColor(0.0,0.0,0.0,0.0);
